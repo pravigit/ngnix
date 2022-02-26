@@ -1,0 +1,15 @@
+---
+# tasks file for ngnix
+    - name: Install Ngnix
+      apt:
+          name=nginx
+          state=latest
+
+    - name: Restart Nginx
+      service:
+          name=nginix
+          state=started
+
+      notify:
+          - send email on start nginix
+

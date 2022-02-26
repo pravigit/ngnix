@@ -1,0 +1,9 @@
+---
+  - name: send email on start ngnix
+    community.general.mail:
+     host: smtp.gmail.com
+     port: 587
+     to: Praveen Kumar <praveen.ula@gmail.com>
+     subject: Ansible-report
+     body: System {{ ansible_hostname }} has been successfully provisioned.
+
